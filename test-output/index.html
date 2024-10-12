@@ -103,12 +103,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="script.TestDemo2" class="method navigator-link" hash-for-method="test1">test1</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="script.TestDemo" class="method navigator-link" hash-for-method="test1">test1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="script.TestDemo" class="method navigator-link" hash-for-method="test1">test1</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="script.TestDemo2" class="method navigator-link" hash-for-method="test1">test1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -162,7 +162,7 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+&lt;suite name=&quot;Suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;script.TestDemo&quot;/&gt;
@@ -210,16 +210,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test1')
 data.setCell(0, 2, 'script.TestDemo')
-data.setCell(0, 3, 11);
+data.setCell(0, 3, 9);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'test1')
 data.setCell(1, 2, 'script.TestDemo2')
-data.setCell(1, 3, 2);
+data.setCell(1, 3, 1);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 ms</span>
+              <span class="suite-total-time">Total running time: 10 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -239,7 +239,7 @@ return data;
             <div class="reporter-method-div">
               <span class="reporter-method-name">test1</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">test1....</span>
+                <span class="reporter-method-output">Loveena:test1....</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -264,26 +264,26 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">test1</span>
-                <span class="method-start">5625 ms</span>
+                <span class="method-start">5647 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">postcondition</span>
-                <span class="method-start">5640 ms</span>
+                <span class="method-start">5659 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">script.TestDemo2</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">precondition</span>
-                <span class="method-start">5753 ms</span>
+                <span class="method-start">5772 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">test1</span>
-                <span class="method-start">10783 ms</span>
+                <span class="method-start">10784 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">postcondition</span>
-                <span class="method-start">10786 ms</span>
+                <span class="method-start">10787 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
