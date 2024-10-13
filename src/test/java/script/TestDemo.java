@@ -3,6 +3,7 @@ package script;
 //having to run testNG.xml file
 
 import org.testng.annotations.Test;
+import org.testng.Assert;
 import org.testng.Reporter;
 import generic.BaseTest;
 
@@ -10,6 +11,7 @@ public class TestDemo extends BaseTest {
 	@Test
 	public void test1() {
 		Reporter.log("test1....", true);
+		Assert.fail();
 	}
 
 }
