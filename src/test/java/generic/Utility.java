@@ -14,8 +14,9 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 //after this create a method under generic with this program and make changes in basetest file
 //after which i will be copying this file to Selenium workspace
 
-//also add a method to read from excel
-public class Utility {
+//also add a method to read from excel, make the class abstract as all methods are static
+
+public abstract class Utility {
 	public static String getData(String path, String key) {
 		String value = "";
 		try {
