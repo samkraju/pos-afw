@@ -1,8 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Opening chrome on local system]]>
+      <![CDATA[Open the browser]]>
+    </line>
+    <line>
+      <![CDATA[Opening Chrome on remote system]]>
+    </line>
+    <line>
+      <![CDATA[Maximize the browser]]>
+    </line>
+    <line>
+      <![CDATA[Enter the URL]]>
+    </line>
+    <line>
+      <![CDATA[Implicit wait]]>
+    </line>
+    <line>
+      <![CDATA[Explicit wait]]>
+    </line>
+    <line>
+      <![CDATA[Loveena running test1....]]>
+    </line>
+    <line>
+      <![CDATA[test1 has passed,hence NO screenshot has been taken]]>
+    </line>
+    <line>
+      <![CDATA[Open the browser]]>
+    </line>
+    <line>
+      <![CDATA[Opening Chrome on remote system]]>
     </line>
     <line>
       <![CDATA[Maximize the browser]]>
@@ -23,12 +50,12 @@
       <![CDATA[test1 has failed,hence screenshot has been taken]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-10-14T19:35:34 GST" name="Default suite" finished-at="2024-10-14T19:35:55 GST" duration-ms="20762">
+  <suite started-at="2024-10-14T20:01:14 GST" name="Suite" finished-at="2024-10-14T20:01:37 GST" duration-ms="22851">
     <groups>
     </groups>
-    <test started-at="2024-10-14T19:35:34 GST" name="Default test" finished-at="2024-10-14T19:35:55 GST" duration-ms="20762">
+    <test started-at="2024-10-14T20:01:14 GST" name="TestChrome" finished-at="2024-10-14T20:01:37 GST" duration-ms="22851">
       <class name="script.TestDemo">
-        <test-method is-config="true" signature="precondition(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:script.TestDemo@6221a451]" started-at="2024-10-14T19:35:34 GST" name="precondition" finished-at="2024-10-14T19:35:54 GST" duration-ms="19579" status="PASS">
+        <test-method is-config="true" signature="precondition(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:script.TestDemo@58cbafc2]" started-at="2024-10-14T20:01:26 GST" name="precondition" finished-at="2024-10-14T20:01:36 GST" duration-ms="9965" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,23 +64,26 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[no]]>
+                <![CDATA[yes]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[]]>
+                <![CDATA[http://192.168.1.102:4444]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[./staging_env.properties]]>
+                <![CDATA[qa_env.properties]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[Opening chrome on local system]]>
+              <![CDATA[Open the browser]]>
+            </line>
+            <line>
+              <![CDATA[Opening Chrome on remote system]]>
             </line>
             <line>
               <![CDATA[Maximize the browser]]>
@@ -69,7 +99,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- precondition -->
-        <test-method signature="test1()[pri:0, instance:script.TestDemo@6221a451]" started-at="2024-10-14T19:35:54 GST" name="test1" finished-at="2024-10-14T19:35:55 GST" duration-ms="708" status="FAIL">
+        <test-method signature="test1()[pri:0, instance:script.TestDemo@58cbafc2]" started-at="2024-10-14T20:01:36 GST" name="test1" finished-at="2024-10-14T20:01:37 GST" duration-ms="675" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[null]]>
@@ -116,11 +146,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
             </line>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="postcondition(org.testng.ITestResult)[pri:0, instance:script.TestDemo@6221a451]" started-at="2024-10-14T19:35:55 GST" name="postcondition" finished-at="2024-10-14T19:35:55 GST" duration-ms="424" status="PASS">
+        <test-method is-config="true" signature="postcondition(org.testng.ITestResult)[pri:0, instance:script.TestDemo@58cbafc2]" started-at="2024-10-14T20:01:37 GST" name="postcondition" finished-at="2024-10-14T20:01:37 GST" duration-ms="306" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test1 status=FAILURE method=TestDemo.test1()[pri:0, instance:script.TestDemo@6221a451] output=test1....Sam is a genius. 😜]]]>
+                <![CDATA[[TestResult name=test1 status=FAILURE method=TestDemo.test1()[pri:0, instance:script.TestDemo@58cbafc2] output=test1....Sam is a genius. 😜]]]>
               </value>
             </param>
           </params>
@@ -131,6 +161,73 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </reporter-output>
         </test-method> <!-- postcondition -->
       </class> <!-- script.TestDemo -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="script.TestDemo2">
+        <test-method is-config="true" signature="precondition(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:script.TestDemo2@1e6a3214]" started-at="2024-10-14T20:01:14 GST" name="precondition" finished-at="2024-10-14T20:01:26 GST" duration-ms="11720" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[yes]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://192.168.1.102:4444]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[qa_env.properties]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Open the browser]]>
+            </line>
+            <line>
+              <![CDATA[Opening Chrome on remote system]]>
+            </line>
+            <line>
+              <![CDATA[Maximize the browser]]>
+            </line>
+            <line>
+              <![CDATA[Enter the URL]]>
+            </line>
+            <line>
+              <![CDATA[Implicit wait]]>
+            </line>
+            <line>
+              <![CDATA[Explicit wait]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- precondition -->
+        <test-method signature="test1()[pri:0, instance:script.TestDemo2@1e6a3214]" started-at="2024-10-14T20:01:26 GST" name="test1" finished-at="2024-10-14T20:01:26 GST" duration-ms="8" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Loveena running test1....]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method is-config="true" signature="postcondition(org.testng.ITestResult)[pri:0, instance:script.TestDemo2@1e6a3214]" started-at="2024-10-14T20:01:26 GST" name="postcondition" finished-at="2024-10-14T20:01:26 GST" duration-ms="114" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test1 status=SUCCESS method=TestDemo2.test1()[pri:0, instance:script.TestDemo2@1e6a3214] output=Loveena running test1....]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[test1 has passed,hence NO screenshot has been taken]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- postcondition -->
+      </class> <!-- script.TestDemo2 -->
+    </test> <!-- TestChrome -->
+  </suite> <!-- Suite -->
 </testng-results>

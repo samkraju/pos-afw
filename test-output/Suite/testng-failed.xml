@@ -2,14 +2,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
   <test thread-count="5" name="TestChrome(failed)">
+    <parameter name="grid" value="yes"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="gridURL" value="http://192.168.1.102:4444"/>
+    <parameter name="env" value="qa_env.properties"/>
     <classes>
-      <class name="script.TestDemo2">
-        <methods>
-          <include name="test1"/>
-          <include name="precondition"/>
-          <include name="postcondition"/>
-        </methods>
-      </class> <!-- script.TestDemo2 -->
       <class name="script.TestDemo">
         <methods>
           <include name="test1"/>
@@ -17,13 +14,6 @@
           <include name="postcondition"/>
         </methods>
       </class> <!-- script.TestDemo -->
-      <class name="script.TestDemo3">
-        <methods>
-          <include name="test1"/>
-          <include name="precondition"/>
-          <include name="postcondition"/>
-        </methods>
-      </class> <!-- script.TestDemo3 -->
     </classes>
   </test> <!-- TestChrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->

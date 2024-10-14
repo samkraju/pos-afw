@@ -2,7 +2,7 @@
 <suite name="Suite" parallel="none">
 	<test name="TestChrome">
 		<parameter name="browser" value="chrome"></parameter>
-		<parameter name="grid" value="no"></parameter>
+		<parameter name="grid" value="yes"></parameter>
 		<parameter name="gridURL" value="http://192.168.1.102:4444"></parameter>
 		<parameter name="env" value="qa_env.properties"></parameter>
 

@@ -11,7 +11,7 @@ import generic.Utility;
 public class TestDemo extends BaseTest {
 	@Test
 	public void test1() {
-		String v = Utility.readFromExcel("./data/input.xlsx", "sheet1", 0, 0);
+		String v = Utility.readFromExcel(xlpath, "sheet1", 0, 0);
 		Reporter.log("test1...."+v, true);
 		Assert.fail();
 	}

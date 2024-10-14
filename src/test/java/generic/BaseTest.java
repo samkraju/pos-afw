@@ -1,5 +1,6 @@
 package generic;
 
+
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -13,6 +14,8 @@ import org.openqa.selenium.TakesScreenshot;
 //open browser enter url open respective browser , add explicit and implicit wait
 //use parameters in testNG to execute on different browser
 //dont forget to set @Optional to avoid NullPointerException
+//copy all the public static final variables into an interface
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -29,14 +32,15 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-public class BaseTest {
+public class BaseTest implements IAutoConstants {
+	
 	WebDriver driver;// create global variable
 	WebDriverWait wait;
 
 	@Parameters({ "browser", "grid", "gridURL","env" })
 	@BeforeMethod
-	public void precondition(@Optional("chrome") String browser, @Optional("no") String grid,
-			@Optional("") String gridurl,@Optional("./staging_env.properties")String env) throws MalformedURLException // grid=no is local system, else remote system
+	public void precondition(@Optional(DEFAULTBROWSER) String browser, @Optional(DEFAULTGRID) String grid,
+			@Optional(DEFAULTGRIDURL) String gridurl,@Optional(DEFAULTENV)String env) throws MalformedURLException // grid=no is local system, else remote system
 	{
 		System.out.println("browser : " + browser);
 		System.out.println("grid : " + grid);
@@ -103,7 +107,7 @@ public class BaseTest {
 		if (status == 2) {
 			TakesScreenshot t = (TakesScreenshot) driver;
 			File src = t.getScreenshotAs(OutputType.FILE);// src as png
-			String path = "./screenshots/" + name + ".png";
+			String path = SCREENSHOT + name + ".png";
 			File dst = new File(path);
 			FileUtils.copyFile(src, dst);
 			Reporter.log(name + " has failed,hence screenshot has been taken", true);
