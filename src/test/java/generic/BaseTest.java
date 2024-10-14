@@ -33,10 +33,10 @@ public class BaseTest {
 	WebDriver driver;// create global variable
 	WebDriverWait wait;
 
-	@Parameters({ "browser", "grid", "gridURL" })
+	@Parameters({ "browser", "grid", "gridURL","env" })
 	@BeforeMethod
 	public void precondition(@Optional("chrome") String browser, @Optional("no") String grid,
-			@Optional("") String gridurl) throws MalformedURLException // grid=no is local system, else remote system
+			@Optional("") String gridurl,@Optional("./staging_env.properties")String env) throws MalformedURLException // grid=no is local system, else remote system
 	{
 		System.out.println("browser : " + browser);
 		System.out.println("grid : " + grid);
@@ -80,11 +80,19 @@ public class BaseTest {
 
 		driver.manage().window().maximize();
 		Reporter.log("Maximize the browser", true);
-		driver.get("https://www.google.co.in");
+
+		String appurl = Utility.getData(env, "Appurl");
+		System.out.println(appurl);
+		driver.get(appurl);
 		Reporter.log("Enter the URL", true);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));// implicit wait
+
+		String ito = Utility.getData(env, "ITO");
+		int time = Integer.parseInt(ito);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(time));// implicit wait
 		Reporter.log("Implicit wait", true);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		int eto = Integer.parseInt(Utility.getData(env, "ETO"));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(eto));
 		Reporter.log("Explicit wait", true);
 	}
 
@@ -98,11 +106,12 @@ public class BaseTest {
 			String path = "./screenshots/" + name + ".png";
 			File dst = new File(path);
 			FileUtils.copyFile(src, dst);
-			Reporter.log(name + " has failed,hence screenshot has been taken",true);
+			Reporter.log(name + " has failed,hence screenshot has been taken", true);
 
 		} else {
-			Reporter.log(name + " has passed,hence NO screenshot has been taken",true);
+			Reporter.log(name + " has passed,hence NO screenshot has been taken", true);
 		}
+		;
 
 		driver.quit();
 	}
