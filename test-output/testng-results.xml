@@ -17,18 +17,18 @@
       <![CDATA[Explicit wait]]>
     </line>
     <line>
-      <![CDATA[HomePage displayed]]>
+      <![CDATA[Pass:HomePage displayed]]>
     </line>
     <line>
       <![CDATA[testValidLogin has passed,hence NO screenshot has been taken]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-10-14T23:03:35 GST" name="Default suite" finished-at="2024-10-14T23:03:46 GST" duration-ms="11043">
+  <suite started-at="2024-10-14T23:43:58 GST" name="Default suite" finished-at="2024-10-14T23:44:12 GST" duration-ms="13845">
     <groups>
     </groups>
-    <test started-at="2024-10-14T23:03:35 GST" name="Default test" finished-at="2024-10-14T23:03:46 GST" duration-ms="11043">
+    <test started-at="2024-10-14T23:43:58 GST" name="Default test" finished-at="2024-10-14T23:44:12 GST" duration-ms="13845">
       <class name="scriptForLoginPage.ValidLogin">
-        <test-method is-config="true" signature="precondition(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:scriptForLoginPage.ValidLogin@52719fb6]" started-at="2024-10-14T23:03:35 GST" name="precondition" finished-at="2024-10-14T23:03:42 GST" duration-ms="7498" status="PASS">
+        <test-method is-config="true" signature="precondition(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:scriptForLoginPage.ValidLogin@52719fb6]" started-at="2024-10-14T23:43:58 GST" name="precondition" finished-at="2024-10-14T23:44:07 GST" duration-ms="9423" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,18 +69,18 @@
             </line>
           </reporter-output>
         </test-method> <!-- precondition -->
-        <test-method signature="testValidLogin()[pri:1, instance:scriptForLoginPage.ValidLogin@52719fb6]" started-at="2024-10-14T23:03:42 GST" name="testValidLogin" finished-at="2024-10-14T23:03:46 GST" duration-ms="3392" status="PASS">
+        <test-method signature="testValidLogin()[pri:1, instance:scriptForLoginPage.ValidLogin@52719fb6]" started-at="2024-10-14T23:44:07 GST" name="testValidLogin" finished-at="2024-10-14T23:44:12 GST" duration-ms="4273" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[HomePage displayed]]>
+              <![CDATA[Pass:HomePage displayed]]>
             </line>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
-        <test-method is-config="true" signature="postcondition(org.testng.ITestResult)[pri:0, instance:scriptForLoginPage.ValidLogin@52719fb6]" started-at="2024-10-14T23:03:46 GST" name="postcondition" finished-at="2024-10-14T23:03:46 GST" duration-ms="104" status="PASS">
+        <test-method is-config="true" signature="postcondition(org.testng.ITestResult)[pri:0, instance:scriptForLoginPage.ValidLogin@52719fb6]" started-at="2024-10-14T23:44:12 GST" name="postcondition" finished-at="2024-10-14T23:44:12 GST" duration-ms="100" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin()[pri:1, instance:scriptForLoginPage.ValidLogin@52719fb6] output=HomePage displayed]]]>
+                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin()[pri:1, instance:scriptForLoginPage.ValidLogin@52719fb6] output=Pass:HomePage displayed]]]>
               </value>
             </param>
           </params>

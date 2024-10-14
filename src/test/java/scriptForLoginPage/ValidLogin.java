@@ -7,20 +7,23 @@ import org.testng.Assert;
 
 import org.testng.annotations.Test;
 import generic.BaseTest;
+import generic.Utility;
 import page.HomePage;
 import page.LoginPage;
 
 public class ValidLogin extends BaseTest {
 	@Test(priority = 1) // priority will be based on manual test cases flow of execution
 	public void testValidLogin() {
+		String un=Utility.readFromExcel(xlpath, "ValidLogin", 1, 0);
+		String pw=Utility.readFromExcel(xlpath, "ValidLogin", 1, 1);
 		LoginPage loginpage = new LoginPage(driver);
 //Enter the steps as per manual test case
-//	Steps
+
 //	1. enter valid userName
-		loginpage.enterUN("admin");
+		loginpage.enterUN(un);
 
 //	2. enter valid password
-		loginpage.enterPW("pointofsale");
+		loginpage.enterPW(pw);
 //	3. click go button
 		loginpage.clickButton();
 
