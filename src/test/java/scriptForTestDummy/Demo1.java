@@ -1,4 +1,4 @@
-package script;
+package scriptForTestDummy;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
