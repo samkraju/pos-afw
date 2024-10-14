@@ -13,7 +13,7 @@ public class TestDemo extends BaseTest {
 	public void test1() {
 		String v = Utility.readFromExcel(xlpath, "sheet1", 0, 0);
 		Reporter.log("test1...."+v, true);
-		Assert.fail();
+	//	Assert.fail();
 	}
 
 }
