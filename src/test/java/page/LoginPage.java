@@ -16,7 +16,7 @@ public class LoginPage {
 	@FindBy(name = "login-button")
 	private WebElement gobutton;
 
-	LoginPage(WebDriver driver) {
+	public LoginPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
 

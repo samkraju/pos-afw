@@ -34,8 +34,8 @@ import org.testng.annotations.Parameters;
 
 public class BaseTest implements IAutoConstants {
 	
-	WebDriver driver;// create global variable
-	WebDriverWait wait;
+	public WebDriver driver;// create global variable
+	public WebDriverWait wait;
 
 	@Parameters({ "browser", "grid", "gridURL","env" })
 	@BeforeMethod
