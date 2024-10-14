@@ -51,4 +51,28 @@ public abstract class Utility {
 		}
 	}
 
+	public static int getRowCount(String path, String sheet) {
+		int r = 0;
+		try {
+			Workbook wb = WorkbookFactory.create(new FileInputStream(path));
+			r = wb.getSheet(sheet).getLastRowNum();
+			r = r + 1;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return r;
+	}
+
+	public static int getCellCount(String path, String sheet) {
+		int c = 0;
+		try {
+			Workbook wb = WorkbookFactory.create(new FileInputStream(path));
+			c = wb.getSheet(sheet).getRow(0).getLastCellNum();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return c;
+
+	}
 }
