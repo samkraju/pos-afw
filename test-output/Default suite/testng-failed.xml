@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="script.Demo1">
+      <class name="script.TestDemo">
         <methods>
-          <include name="am"/>
-          <include name="bm"/>
-          <include name="test2"/>
+          <include name="test1"/>
+          <include name="precondition"/>
+          <include name="postcondition"/>
         </methods>
-      </class> <!-- script.Demo1 -->
+      </class> <!-- script.TestDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

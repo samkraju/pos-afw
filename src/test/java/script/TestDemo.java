@@ -6,11 +6,13 @@ import org.testng.annotations.Test;
 import org.testng.Assert;
 import org.testng.Reporter;
 import generic.BaseTest;
+import generic.Utility;
 
 public class TestDemo extends BaseTest {
 	@Test
 	public void test1() {
-		Reporter.log("test1....", true);
+		String v = Utility.readFromExcel("./data/input.xlsx", "sheet1", 0, 0);
+		Reporter.log("test1...."+v, true);
 		Assert.fail();
 	}
 

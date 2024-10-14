@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Oct 13 12:30:11 GST 2024</td>
+<td>Started on:</td><td>Mon Oct 14 19:35:34 GST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (74 ms)</td>
+<tr><td>Total time:</td><td>20 seconds (20762 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,18 +76,18 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='script.Demo1.test2()'><b>test2</b><br>Test class: script.Demo1<br/>
-<a href="#Output-442125849" onClick='toggleBox("Output-442125849", this, "Show output", "Hide output");'>Show output</a>
+<td title='script.TestDemo.test1()'><b>test1</b><br>Test class: script.TestDemo<br/>
+<a href="#Output-1966114624" onClick='toggleBox("Output-1966114624", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-442125849" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-442125849">
-This is test2<br/>
+<a href="#Output-1966114624" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1966114624">
+test1....Sam is a genius. 😜<br/>
 </div>
 </td>
 <td><div><pre>java.lang.AssertionError: null
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.fail(Assert.java:116)
-	at script.Demo1.test2(Demo1.java:43)
+	at script.TestDemo.test1(TestDemo.java:16)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -116,11 +116,11 @@ This is test2<br/>
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace442125849", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace442125849'><pre>java.lang.AssertionError: null
+</pre></div><a href='#' onClick='toggleBox("stack-trace1966114624", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1966114624'><pre>java.lang.AssertionError: null
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.fail(Assert.java:116)
-	at script.Demo1.test2(Demo1.java:43)
+	at script.TestDemo.test1(TestDemo.java:16)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -151,28 +151,7 @@ This is test2<br/>
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>script.Demo1@4f80542f</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='script.Demo1.test1()'><b>test1</b><br>Test class: script.Demo1<br/>
-<a href="#Output-823914581" onClick='toggleBox("Output-823914581", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-823914581" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-823914581">
-This is test1<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>script.Demo1@4f80542f</td></tr>
+<td>script.TestDemo@6221a451</td></tr>
 </table><p>
 </body>
 </html>
