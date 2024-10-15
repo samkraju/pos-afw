@@ -17,18 +17,18 @@
       <![CDATA[Explicit wait]]>
     </line>
     <line>
-      <![CDATA[Pass:HomePage displayed]]>
+      <![CDATA[PASS:err msg displyed:]]>
     </line>
     <line>
-      <![CDATA[testValidLogin has passed,hence NO screenshot has been taken]]>
+      <![CDATA[testInvalidLogin has passed,hence NO screenshot has been taken]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-10-14T23:43:58 GST" name="Default suite" finished-at="2024-10-14T23:44:12 GST" duration-ms="13845">
+  <suite started-at="2024-10-15T18:17:10 GST" name="Default suite" finished-at="2024-10-15T18:17:19 GST" duration-ms="9459">
     <groups>
     </groups>
-    <test started-at="2024-10-14T23:43:58 GST" name="Default test" finished-at="2024-10-14T23:44:12 GST" duration-ms="13845">
-      <class name="scriptForLoginPage.ValidLogin">
-        <test-method is-config="true" signature="precondition(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:scriptForLoginPage.ValidLogin@52719fb6]" started-at="2024-10-14T23:43:58 GST" name="precondition" finished-at="2024-10-14T23:44:07 GST" duration-ms="9423" status="PASS">
+    <test started-at="2024-10-15T18:17:10 GST" name="Default test" finished-at="2024-10-15T18:17:19 GST" duration-ms="9459">
+      <class name="scriptForLoginPage.InvalidLogin">
+        <test-method is-config="true" signature="precondition(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:scriptForLoginPage.InvalidLogin@52719fb6]" started-at="2024-10-15T18:17:10 GST" name="precondition" finished-at="2024-10-15T18:17:17 GST" duration-ms="7397" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,28 +69,28 @@
             </line>
           </reporter-output>
         </test-method> <!-- precondition -->
-        <test-method signature="testValidLogin()[pri:1, instance:scriptForLoginPage.ValidLogin@52719fb6]" started-at="2024-10-14T23:44:07 GST" name="testValidLogin" finished-at="2024-10-14T23:44:12 GST" duration-ms="4273" status="PASS">
+        <test-method signature="testInvalidLogin()[pri:2, instance:scriptForLoginPage.InvalidLogin@52719fb6]" started-at="2024-10-15T18:17:17 GST" name="testInvalidLogin" finished-at="2024-10-15T18:17:19 GST" duration-ms="1916" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Pass:HomePage displayed]]>
+              <![CDATA[PASS:err msg displyed:]]>
             </line>
           </reporter-output>
-        </test-method> <!-- testValidLogin -->
-        <test-method is-config="true" signature="postcondition(org.testng.ITestResult)[pri:0, instance:scriptForLoginPage.ValidLogin@52719fb6]" started-at="2024-10-14T23:44:12 GST" name="postcondition" finished-at="2024-10-14T23:44:12 GST" duration-ms="100" status="PASS">
+        </test-method> <!-- testInvalidLogin -->
+        <test-method is-config="true" signature="postcondition(org.testng.ITestResult)[pri:0, instance:scriptForLoginPage.InvalidLogin@52719fb6]" started-at="2024-10-15T18:17:19 GST" name="postcondition" finished-at="2024-10-15T18:17:19 GST" duration-ms="97" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=ValidLogin.testValidLogin()[pri:1, instance:scriptForLoginPage.ValidLogin@52719fb6] output=Pass:HomePage displayed]]]>
+                <![CDATA[[TestResult name=testInvalidLogin status=SUCCESS method=InvalidLogin.testInvalidLogin()[pri:2, instance:scriptForLoginPage.InvalidLogin@52719fb6] output=PASS:err msg displyed:]]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[testValidLogin has passed,hence NO screenshot has been taken]]>
+              <![CDATA[testInvalidLogin has passed,hence NO screenshot has been taken]]>
             </line>
           </reporter-output>
         </test-method> <!-- postcondition -->
-      </class> <!-- scriptForLoginPage.ValidLogin -->
+      </class> <!-- scriptForLoginPage.InvalidLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
