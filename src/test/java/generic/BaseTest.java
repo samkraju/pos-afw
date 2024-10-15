@@ -85,17 +85,17 @@ public class BaseTest implements IAutoConstants {
 		driver.manage().window().maximize();
 		Reporter.log("Maximize the browser", true);
 
-		String appurl = Utility.getData(env, "Appurl");
+		String appurl = Utility.getDatafromProperty(env, "Appurl");
 		System.out.println(appurl);
 		driver.get(appurl);
 		Reporter.log("Enter the URL", true);
 
-		String ito = Utility.getData(env, "ITO");
+		String ito = Utility.getDatafromProperty(env, "ITO");
 		int time = Integer.parseInt(ito);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(time));// implicit wait
 		Reporter.log("Implicit wait", true);
 
-		int eto = Integer.parseInt(Utility.getData(env, "ETO"));
+		int eto = Integer.parseInt(Utility.getDatafromProperty(env, "ETO"));
 		wait = new WebDriverWait(driver, Duration.ofSeconds(eto));
 		Reporter.log("Explicit wait", true);
 	}

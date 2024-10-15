@@ -17,7 +17,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 //also add a method to read from excel, make the class abstract as all methods are static
 
 public abstract class Utility {
-	public static String getData(String path, String key) {
+	public static String getDatafromProperty(String path, String key) {
 		String value = "";
 		try {
 			Properties p = new Properties();
