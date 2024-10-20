@@ -33,6 +33,7 @@ public class ValidateQuantity extends BaseTest {
 		items.clickNewItem();
 		items.enterItemName();
 		items.enterCategory();
+		items.selectSupplier();
 		items.enterWSPrice();
 		items.enterRetailPrice();
 		items.enterQuantity();

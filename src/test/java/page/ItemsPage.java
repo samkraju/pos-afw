@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class ItemsPage {
 	@FindBy(xpath = "//a[@title='Items']")
@@ -24,6 +25,8 @@ public class ItemsPage {
 	private WebElement stock;
 	@FindBy(xpath="//button[text()='Submit']")
 	private WebElement submit;
+	@FindBy(name="supplier_id")
+	private WebElement supplierid;
 
 	public ItemsPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -43,6 +46,12 @@ public class ItemsPage {
 
 	public void enterCategory() {
 		category.sendKeys("Cosmetic");
+	}
+	public void selectSupplier()
+	{
+		
+		Select select=new Select(supplierid);
+		select.selectByVisibleText("D&G");
 	}
 
 	public void enterWSPrice() {

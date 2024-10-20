@@ -20,12 +20,12 @@
       <![CDATA[testQuantity has passed,hence NO screenshot has been taken]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-10-20T12:25:58 GST" name="Default suite" finished-at="2024-10-20T12:26:20 GST" duration-ms="22536">
+  <suite started-at="2024-10-20T16:56:33 GST" name="Default suite" finished-at="2024-10-20T16:56:59 GST" duration-ms="25689">
     <groups>
     </groups>
-    <test started-at="2024-10-20T12:25:58 GST" name="Default test" finished-at="2024-10-20T12:26:20 GST" duration-ms="22536">
+    <test started-at="2024-10-20T16:56:33 GST" name="Default test" finished-at="2024-10-20T16:56:59 GST" duration-ms="25689">
       <class name="scriptForLoginPage.ValidateQuantity">
-        <test-method is-config="true" signature="precondition(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:scriptForLoginPage.ValidateQuantity@52719fb6]" started-at="2024-10-20T12:25:58 GST" name="precondition" finished-at="2024-10-20T12:26:05 GST" duration-ms="7340" status="PASS">
+        <test-method is-config="true" signature="precondition(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:scriptForLoginPage.ValidateQuantity@52719fb6]" started-at="2024-10-20T16:56:33 GST" name="precondition" finished-at="2024-10-20T16:56:41 GST" duration-ms="7721" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -66,11 +66,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- precondition -->
-        <test-method signature="testQuantity()[pri:0, instance:scriptForLoginPage.ValidateQuantity@52719fb6]" started-at="2024-10-20T12:26:05 GST" name="testQuantity" finished-at="2024-10-20T12:26:20 GST" duration-ms="15032" status="PASS">
+        <test-method signature="testQuantity()[pri:0, instance:scriptForLoginPage.ValidateQuantity@52719fb6]" started-at="2024-10-20T16:56:41 GST" name="testQuantity" finished-at="2024-10-20T16:56:57 GST" duration-ms="15801" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testQuantity -->
-        <test-method is-config="true" signature="postcondition(org.testng.ITestResult)[pri:0, instance:scriptForLoginPage.ValidateQuantity@52719fb6]" started-at="2024-10-20T12:26:20 GST" name="postcondition" finished-at="2024-10-20T12:26:20 GST" duration-ms="108" status="PASS">
+        <test-method is-config="true" signature="postcondition(org.testng.ITestResult)[pri:0, instance:scriptForLoginPage.ValidateQuantity@52719fb6]" started-at="2024-10-20T16:56:57 GST" name="postcondition" finished-at="2024-10-20T16:56:59 GST" duration-ms="2117" status="PASS">
           <params>
             <param index="0">
               <value>
