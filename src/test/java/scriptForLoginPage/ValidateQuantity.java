@@ -4,8 +4,10 @@ import org.testng.annotations.Test;
 
 import generic.BaseTest;
 import generic.Utility;
+import page.CustomersPage;
 import page.ItemsPage;
 import page.LoginPage;
+import page.ReceivingsPage;
 import page.SupplierPage;
 
 public class ValidateQuantity extends BaseTest {
@@ -28,7 +30,7 @@ public class ValidateQuantity extends BaseTest {
 		supplierpage.enterLN();
 		supplierpage.clickSubmit();
 //		Create a new item
-		ItemsPage items=new ItemsPage(driver);
+		ItemsPage items = new ItemsPage(driver);
 		items.clickItems();
 		items.clickNewItem();
 		items.enterItemName();
@@ -40,7 +42,14 @@ public class ValidateQuantity extends BaseTest {
 		items.enterStock();
 		items.clickSubmit();
 //		Create a new Customer
+//		CustomersPage customer = new CustomersPage(driver);
+//		customer.clickCustomerTab();
+//		customer.clickNewCustomer();
+//		customer.enterName();
 //		Receive the new item from new supplier
+		ReceivingsPage receivings = new ReceivingsPage(driver);
+		receivings.clickReceiving();
+		receivings.enterItem();
 
 //		verify the received quantity in items table
 	}
