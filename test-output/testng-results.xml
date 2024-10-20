@@ -17,18 +17,15 @@
       <![CDATA[Explicit wait]]>
     </line>
     <line>
-      <![CDATA[PASS:err msg displyed:]]>
-    </line>
-    <line>
-      <![CDATA[testInvalidLogin has passed,hence NO screenshot has been taken]]>
+      <![CDATA[testQuantity has passed,hence NO screenshot has been taken]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-10-15T18:17:10 GST" name="Default suite" finished-at="2024-10-15T18:17:19 GST" duration-ms="9459">
+  <suite started-at="2024-10-20T12:25:58 GST" name="Default suite" finished-at="2024-10-20T12:26:20 GST" duration-ms="22536">
     <groups>
     </groups>
-    <test started-at="2024-10-15T18:17:10 GST" name="Default test" finished-at="2024-10-15T18:17:19 GST" duration-ms="9459">
-      <class name="scriptForLoginPage.InvalidLogin">
-        <test-method is-config="true" signature="precondition(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:scriptForLoginPage.InvalidLogin@52719fb6]" started-at="2024-10-15T18:17:10 GST" name="precondition" finished-at="2024-10-15T18:17:17 GST" duration-ms="7397" status="PASS">
+    <test started-at="2024-10-20T12:25:58 GST" name="Default test" finished-at="2024-10-20T12:26:20 GST" duration-ms="22536">
+      <class name="scriptForLoginPage.ValidateQuantity">
+        <test-method is-config="true" signature="precondition(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:scriptForLoginPage.ValidateQuantity@52719fb6]" started-at="2024-10-20T12:25:58 GST" name="precondition" finished-at="2024-10-20T12:26:05 GST" duration-ms="7340" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,28 +66,25 @@
             </line>
           </reporter-output>
         </test-method> <!-- precondition -->
-        <test-method signature="testInvalidLogin()[pri:2, instance:scriptForLoginPage.InvalidLogin@52719fb6]" started-at="2024-10-15T18:17:17 GST" name="testInvalidLogin" finished-at="2024-10-15T18:17:19 GST" duration-ms="1916" status="PASS">
+        <test-method signature="testQuantity()[pri:0, instance:scriptForLoginPage.ValidateQuantity@52719fb6]" started-at="2024-10-20T12:26:05 GST" name="testQuantity" finished-at="2024-10-20T12:26:20 GST" duration-ms="15032" status="PASS">
           <reporter-output>
-            <line>
-              <![CDATA[PASS:err msg displyed:]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- testInvalidLogin -->
-        <test-method is-config="true" signature="postcondition(org.testng.ITestResult)[pri:0, instance:scriptForLoginPage.InvalidLogin@52719fb6]" started-at="2024-10-15T18:17:19 GST" name="postcondition" finished-at="2024-10-15T18:17:19 GST" duration-ms="97" status="PASS">
+        </test-method> <!-- testQuantity -->
+        <test-method is-config="true" signature="postcondition(org.testng.ITestResult)[pri:0, instance:scriptForLoginPage.ValidateQuantity@52719fb6]" started-at="2024-10-20T12:26:20 GST" name="postcondition" finished-at="2024-10-20T12:26:20 GST" duration-ms="108" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testInvalidLogin status=SUCCESS method=InvalidLogin.testInvalidLogin()[pri:2, instance:scriptForLoginPage.InvalidLogin@52719fb6] output=PASS:err msg displyed:]]]>
+                <![CDATA[[TestResult name=testQuantity status=SUCCESS method=ValidateQuantity.testQuantity()[pri:0, instance:scriptForLoginPage.ValidateQuantity@52719fb6] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[testInvalidLogin has passed,hence NO screenshot has been taken]]>
+              <![CDATA[testQuantity has passed,hence NO screenshot has been taken]]>
             </line>
           </reporter-output>
         </test-method> <!-- postcondition -->
-      </class> <!-- scriptForLoginPage.InvalidLogin -->
+      </class> <!-- scriptForLoginPage.ValidateQuantity -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

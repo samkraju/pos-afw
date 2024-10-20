@@ -101,7 +101,7 @@ public class BaseTest implements IAutoConstants {
 	}
 
 	@AfterMethod
-	public void postcondition(ITestResult testResult) throws IOException {
+	public void postcondition(ITestResult testResult) throws IOException, InterruptedException {
 		String name = testResult.getName();
 		int status = testResult.getStatus();
 		if (status == 2) {
@@ -115,8 +115,7 @@ public class BaseTest implements IAutoConstants {
 		} else {
 			Reporter.log(name + " has passed,hence NO screenshot has been taken", true);
 		}
-		;
-
+		Thread.sleep(2000);
 		driver.quit();
 	}
 
