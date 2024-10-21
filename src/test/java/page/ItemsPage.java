@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.Reporter;
 
 public class ItemsPage {
@@ -32,14 +33,8 @@ public class ItemsPage {
 	private WebElement receivingQuant;
 	@FindBy(id = "reorder_level")
 	private WebElement reorderLevel;
-//	@FindBy(xpath = "(//a[@class='page-link'])[4]")
-//	private WebElement nextpage;
-//	@FindBy(xpath = "//div[text()='Item Name']")
-//	private WebElement itemname;
-//	@FindBy(xpath = "(//div[text()='Quantity'])[2]")
-//	private WebElement quantityTab;
-	@FindBy(xpath = "//td[text()='pen']")
-	private WebElement item;
+	@FindBy(xpath = "//td[text()='pen']/../td[9]")
+	private WebElement quant;
 
 	public ItemsPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -101,37 +96,10 @@ public class ItemsPage {
 		submit.click();
 	}
 
-//	public void getItemQuantity() {
-//		System.out.println("get name");
-//		String name = itemname.getText();
-//		System.out.println(name);
-//		try {
-//			if (name.equalsIgnoreCase("pen")) {
-//				String q = quantityTab.getText();
-//				Reporter.log("Quantity=" + q, true);
-//				if (q.equals("200")) {
-//					System.out.println("Quantity has been updated successfully ");
-//				} else {
-//					System.out.println("Error in updating quantity ");
-//				}
-//			}
-//		} catch (Exception e) {
-//			nextpage.click();
-//			if (name.equals("Perfume")) {
-//				String q = quantityTab.getText();
-//				Reporter.log("Quantity=" + q, true);
-//				if (q.equals("200")) {
-//					System.out.println("Quantity has been updated successfully ");
-//				} else {
-//					System.out.println("Error in updating quantity ");
-//				}
-//
-//			}
-//
-//		}
 	public void getQuantity() {
-		String i = item.getText();
-		System.out.println("Item name=" + i);
 
+		int q = Integer.parseInt(quant.getText());
+		System.out.println(q);
 	}
+
 }

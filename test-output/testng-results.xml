@@ -23,12 +23,12 @@
       <![CDATA[testQuantity has passed,hence NO screenshot has been taken]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-10-21T13:01:18 GST" name="Default suite" finished-at="2024-10-21T13:01:51 GST" duration-ms="32933">
+  <suite started-at="2024-10-21T17:41:08 GST" name="Default suite" finished-at="2024-10-21T17:41:42 GST" duration-ms="33143">
     <groups>
     </groups>
-    <test started-at="2024-10-21T13:01:18 GST" name="Default test" finished-at="2024-10-21T13:01:51 GST" duration-ms="32933">
-      <class name="scriptForLoginPage.ValidateQuantity">
-        <test-method is-config="true" signature="precondition(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:scriptForLoginPage.ValidateQuantity@52719fb6]" started-at="2024-10-21T13:01:19 GST" name="precondition" finished-at="2024-10-21T13:01:27 GST" duration-ms="8045" status="PASS">
+    <test started-at="2024-10-21T17:41:08 GST" name="Default test" finished-at="2024-10-21T17:41:42 GST" duration-ms="33143">
+      <class name="scriptForPOS.ValidateQuantity">
+        <test-method is-config="true" signature="precondition(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:scriptForPOS.ValidateQuantity@52719fb6]" started-at="2024-10-21T17:41:08 GST" name="precondition" finished-at="2024-10-21T17:41:16 GST" duration-ms="7503" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,18 +69,18 @@
             </line>
           </reporter-output>
         </test-method> <!-- precondition -->
-        <test-method signature="testQuantity()[pri:0, instance:scriptForLoginPage.ValidateQuantity@52719fb6]" started-at="2024-10-21T13:01:27 GST" name="testQuantity" finished-at="2024-10-21T13:01:49 GST" duration-ms="22807" status="PASS">
+        <test-method signature="testQuantity()[pri:0, instance:scriptForPOS.ValidateQuantity@52719fb6]" started-at="2024-10-21T17:41:16 GST" name="testQuantity" finished-at="2024-10-21T17:41:39 GST" duration-ms="23573" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Exception occured]]>
             </line>
           </reporter-output>
         </test-method> <!-- testQuantity -->
-        <test-method is-config="true" signature="postcondition(org.testng.ITestResult)[pri:0, instance:scriptForLoginPage.ValidateQuantity@52719fb6]" started-at="2024-10-21T13:01:49 GST" name="postcondition" finished-at="2024-10-21T13:01:51 GST" duration-ms="2008" status="PASS">
+        <test-method is-config="true" signature="postcondition(org.testng.ITestResult)[pri:0, instance:scriptForPOS.ValidateQuantity@52719fb6]" started-at="2024-10-21T17:41:39 GST" name="postcondition" finished-at="2024-10-21T17:41:41 GST" duration-ms="2008" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testQuantity status=SUCCESS method=ValidateQuantity.testQuantity()[pri:0, instance:scriptForLoginPage.ValidateQuantity@52719fb6] output=Exception occured]]]>
+                <![CDATA[[TestResult name=testQuantity status=SUCCESS method=ValidateQuantity.testQuantity()[pri:0, instance:scriptForPOS.ValidateQuantity@52719fb6] output=Exception occured]]]>
               </value>
             </param>
           </params>
@@ -90,7 +90,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- postcondition -->
-      </class> <!-- scriptForLoginPage.ValidateQuantity -->
+      </class> <!-- scriptForPOS.ValidateQuantity -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
