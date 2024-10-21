@@ -1,5 +1,6 @@
 package scriptForLoginPage;
 
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import generic.BaseTest;
@@ -29,6 +30,7 @@ public class ValidateQuantity extends BaseTest {
 		supplierpage.enterFN();
 		supplierpage.enterLN();
 		supplierpage.clickSubmit();
+
 //		Create a new item
 		ItemsPage items = new ItemsPage(driver);
 		items.clickItems();
@@ -41,17 +43,28 @@ public class ValidateQuantity extends BaseTest {
 		items.enterQuantity();
 		items.enterStock();
 		items.clickSubmit();
-//		Create a new Customer
-//		CustomersPage customer = new CustomersPage(driver);
-//		customer.clickCustomerTab();
-//		customer.clickNewCustomer();
-//		customer.enterName();
-//		Receive the new item from new supplier
-		ReceivingsPage receivings = new ReceivingsPage(driver);
-		receivings.clickReceiving();
-		receivings.enterItem();
 
-//		verify the received quantity in items table
+//		Create a new Customer
+		try {
+			CustomersPage customer = new CustomersPage(driver);
+			customer.clickCustomerTab();
+			customer.clickNewCustomer();
+			customer.enterName();
+		} catch (Exception e) {
+			Reporter.log("Exception occured", true);
+			e.printStackTrace();
+		}
+
+		// Receive the new item from new supplier
+		ReceivingsPage receivingsPage = new ReceivingsPage(driver);
+		receivingsPage.clickReceiving();
+		receivingsPage.enterItem();
+		receivingsPage.enterQuantity();
+		receivingsPage.clickFinish();
+
+//		Verify the received quantity in items table
+		items.clickItems();
+//		items.getItemQuantity();
 	}
 
 }
