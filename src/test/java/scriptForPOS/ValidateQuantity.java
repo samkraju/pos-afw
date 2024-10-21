@@ -1,6 +1,5 @@
 package scriptForPOS;
 
-import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -67,6 +66,7 @@ public class ValidateQuantity extends BaseTest {
 
 //		Verify the received quantity in items table
 		items.clickItems();
+		items.searchItem();
 		items.getQuantity();
 
 	}

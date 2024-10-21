@@ -33,7 +33,9 @@ public class ItemsPage {
 	private WebElement receivingQuant;
 	@FindBy(id = "reorder_level")
 	private WebElement reorderLevel;
-	@FindBy(xpath = "//td[text()='pen']/../td[9]")
+	@FindBy(xpath="//input[@type='search']")
+	private WebElement search;
+	@FindBy(xpath = "//td[text()='Perfume']/../td[9]")
 	private WebElement quant;
 
 	public ItemsPage(WebDriver driver) {
@@ -95,12 +97,16 @@ public class ItemsPage {
 	public void clickSubmit() {
 		submit.click();
 	}
+	public void searchItem()
+	{
+		search.sendKeys("Perfume");
+	}
 
 	public int getQuantity() {
 
 		int q = Integer.parseInt(quant.getText());
 		System.out.println("quanity=" + q);
-		if (q == 100) {
+		if (q == 200) {
 			Reporter.log("Pass:Item qty updated:" + q, true);
 
 		} else {

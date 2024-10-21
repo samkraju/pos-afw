@@ -116,7 +116,7 @@ public class BaseTest implements IAutoConstants {
 			Reporter.log(name + " has passed,hence NO screenshot has been taken", true);
 		}
 		Thread.sleep(2000);
-	//	driver.quit();
+		driver.quit();
 	}
 
 }
