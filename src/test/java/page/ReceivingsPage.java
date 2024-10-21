@@ -13,11 +13,10 @@ public class ReceivingsPage {
 	@FindBy(id = "item")
 	private WebElement item;
 	WebDriver driver;
-	@FindBy(name="quantity")
+	@FindBy(name = "quantity")
 	private WebElement quantity;
-	@FindBy(id="finish_receiving_button")
+	@FindBy(id = "finish_receiving_button")
 	private WebElement finish;
-	
 
 	public ReceivingsPage(WebDriver driver) {
 
@@ -31,24 +30,22 @@ public class ReceivingsPage {
 
 	public void enterItem() {
 		item.sendKeys("Perfume");
-	try	{
+		try {
 			Thread.sleep(2000);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		catch (Exception e) {
-		e.printStackTrace();
-	}
-		
+
 		item.sendKeys(Keys.ARROW_DOWN);
 		item.sendKeys(Keys.ENTER);
 
 	}
-	public void enterQuantity()
-	{
+
+	public void enterQuantity() {
 		quantity.sendKeys("100");
 	}
-	
-	public void clickFinish()
-	{
+
+	public void clickFinish() {
 		finish.click();
 	}
 
