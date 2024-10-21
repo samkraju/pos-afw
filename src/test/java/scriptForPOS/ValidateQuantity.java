@@ -42,6 +42,8 @@ public class ValidateQuantity extends BaseTest {
 		items.enterRetailPrice();
 		items.enterQuantity();
 		items.enterStock();
+		items.enterReceivingQuant();
+		items.enterReorder();
 		items.clickSubmit();
 
 //		Create a new Customer

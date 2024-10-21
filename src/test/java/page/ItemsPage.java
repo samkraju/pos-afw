@@ -28,15 +28,18 @@ public class ItemsPage {
 	private WebElement submit;
 	@FindBy(name = "supplier_id")
 	private WebElement supplierid;
+	@FindBy(id = "receiving_quantity")
+	private WebElement receivingQuant;
+	@FindBy(id = "reorder_level")
+	private WebElement reorderLevel;
 //	@FindBy(xpath = "(//a[@class='page-link'])[4]")
 //	private WebElement nextpage;
 //	@FindBy(xpath = "//div[text()='Item Name']")
 //	private WebElement itemname;
 //	@FindBy(xpath = "(//div[text()='Quantity'])[2]")
 //	private WebElement quantityTab;
-	@FindBy(xpath="//td[text()='pen']")
+	@FindBy(xpath = "//td[text()='pen']")
 	private WebElement item;
-			
 
 	public ItemsPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -84,6 +87,16 @@ public class ItemsPage {
 		stock.sendKeys("150");
 	}
 
+	public void enterReceivingQuant() {
+		receivingQuant.clear();
+		receivingQuant.sendKeys("100");
+	}
+
+	public void enterReorder() {
+		reorderLevel.clear();
+		reorderLevel.sendKeys("100");
+	}
+
 	public void clickSubmit() {
 		submit.click();
 	}
@@ -116,11 +129,9 @@ public class ItemsPage {
 //			}
 //
 //		}
-	public void getQuantity()
-	{
+	public void getQuantity() {
 		String i = item.getText();
-		System.out.println("Item name="+i);
-		
-	}
-	}
+		System.out.println("Item name=" + i);
 
+	}
+}

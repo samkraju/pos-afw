@@ -17,6 +17,7 @@ public class ReceivingsPage {
 	private WebElement quantity;
 	@FindBy(id="finish_receiving_button")
 	private WebElement finish;
+	
 
 	public ReceivingsPage(WebDriver driver) {
 
@@ -45,6 +46,7 @@ public class ReceivingsPage {
 	{
 		quantity.sendKeys("100");
 	}
+	
 	public void clickFinish()
 	{
 		finish.click();
