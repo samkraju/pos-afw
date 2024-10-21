@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CustomersPage {
 	@FindBy(xpath = "//a[@title='Customers']")
@@ -19,6 +21,7 @@ public class CustomersPage {
 
 	public void clickCustomerTab() {
 		customerTab.click();
+
 	}
 
 	public void clickNewCustomer() {

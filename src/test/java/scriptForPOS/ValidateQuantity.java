@@ -47,13 +47,14 @@ public class ValidateQuantity extends BaseTest {
 		items.clickSubmit();
 
 //		Create a new Customer
+		
 		try {
 			CustomersPage customer = new CustomersPage(driver);
 			customer.clickCustomerTab();
 			customer.clickNewCustomer();
 			customer.enterName();
 		} catch (Exception e) {
-			Reporter.log("Exception occured", true);
+			Reporter.log("Exception occured in Customers tab", true);
 			e.printStackTrace();
 		}
 
