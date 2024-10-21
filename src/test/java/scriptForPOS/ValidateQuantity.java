@@ -1,4 +1,4 @@
-package scriptForLoginPage;
+package scriptForPOS;
 
 import org.testng.Reporter;
 import org.testng.annotations.Test;

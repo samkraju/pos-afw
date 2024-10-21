@@ -1,4 +1,4 @@
-package scriptForLoginPage;
+package scriptForPOS;
 //Create a test method to login and also change the url in properties file
 
 import org.testng.Assert;

@@ -7,7 +7,7 @@
 		<parameter name="env" value="qa_env.properties"></parameter>
 
 		<packages>
-			<package name="scriptForLoginPage"></package>
+			<package name="scriptForPOS"></package>
 		</packages>
 
 	<!-- </test> 
