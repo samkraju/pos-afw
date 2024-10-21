@@ -96,10 +96,19 @@ public class ItemsPage {
 		submit.click();
 	}
 
-	public void getQuantity() {
+	public int getQuantity() {
 
 		int q = Integer.parseInt(quant.getText());
-		System.out.println(q);
+		System.out.println("quanity=" + q);
+		if (q == 100) {
+			Reporter.log("Pass:Item qty updated:" + q, true);
+
+		} else {
+			Reporter.log("Fail:Item hasnt been updated:" + q, true);
+			Assert.fail();
+
+		}
+		return q;
 	}
 
 }
