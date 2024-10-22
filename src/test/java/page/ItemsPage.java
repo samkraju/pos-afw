@@ -102,10 +102,10 @@ public class ItemsPage {
 		search.sendKeys("Perfume");
 	}
 
-	public int getQuantity() {
-		int q = Integer.parseInt(quant.getText());
-		try {
+	public void getQuantity() {
 
+		try {
+			int q = Integer.parseInt(quant.getText());
 			System.out.println("quanity=" + q);
 			if (q == 200) {
 				Reporter.log("PASS:Item qty updated:" + q, true);
@@ -118,7 +118,6 @@ public class ItemsPage {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return q;
 
 	}
 
