@@ -33,7 +33,7 @@ public class ItemsPage {
 	private WebElement receivingQuant;
 	@FindBy(id = "reorder_level")
 	private WebElement reorderLevel;
-	@FindBy(xpath="//input[@type='search']")
+	@FindBy(xpath = "//input[@type='search']")
 	private WebElement search;
 	@FindBy(xpath = "//td[text()='Perfume']/../td[9]")
 	private WebElement quant;
@@ -97,24 +97,29 @@ public class ItemsPage {
 	public void clickSubmit() {
 		submit.click();
 	}
-	public void searchItem()
-	{
+
+	public void searchItem() {
 		search.sendKeys("Perfume");
 	}
 
 	public int getQuantity() {
-
 		int q = Integer.parseInt(quant.getText());
-		System.out.println("quanity=" + q);
-		if (q == 200) {
-			Reporter.log("Pass:Item qty updated:" + q, true);
+		try {
 
-		} else {
-			Reporter.log("Fail:Item hasnt been updated:" + q, true);
-			Assert.fail();
+			System.out.println("quanity=" + q);
+			if (q == 200) {
+				Reporter.log("PASS:Item qty updated:" + q, true);
 
+			} else {
+				Reporter.log("FAIL:Item hasnt been updated:" + q, true);
+				Assert.fail();
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		return q;
+
 	}
 
 }

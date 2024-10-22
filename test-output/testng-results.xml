@@ -20,18 +20,18 @@
       <![CDATA[Exception occured in Customers tab]]>
     </line>
     <line>
-      <![CDATA[Pass:Item qty updated:200]]>
+      <![CDATA[PASS:Item qty updated:200]]>
     </line>
     <line>
       <![CDATA[testQuantity has passed,hence NO screenshot has been taken]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-10-21T21:19:19 GST" name="Default suite" finished-at="2024-10-21T21:19:52 GST" duration-ms="33806">
+  <suite started-at="2024-10-22T12:20:36 GST" name="Default suite" finished-at="2024-10-22T12:21:13 GST" duration-ms="36386">
     <groups>
     </groups>
-    <test started-at="2024-10-21T21:19:19 GST" name="Default test" finished-at="2024-10-21T21:19:52 GST" duration-ms="33806">
+    <test started-at="2024-10-22T12:20:36 GST" name="Default test" finished-at="2024-10-22T12:21:13 GST" duration-ms="36386">
       <class name="scriptForPOS.ValidateQuantity">
-        <test-method is-config="true" signature="precondition(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:scriptForPOS.ValidateQuantity@52719fb6]" started-at="2024-10-21T21:19:19 GST" name="precondition" finished-at="2024-10-21T21:19:26 GST" duration-ms="7445" status="PASS">
+        <test-method is-config="true" signature="precondition(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:scriptForPOS.ValidateQuantity@52719fb6]" started-at="2024-10-22T12:20:36 GST" name="precondition" finished-at="2024-10-22T12:20:44 GST" duration-ms="7464" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -72,17 +72,17 @@
             </line>
           </reporter-output>
         </test-method> <!-- precondition -->
-        <test-method signature="testQuantity()[pri:0, instance:scriptForPOS.ValidateQuantity@52719fb6]" started-at="2024-10-21T21:19:26 GST" name="testQuantity" finished-at="2024-10-21T21:19:50 GST" duration-ms="24164" status="PASS">
+        <test-method signature="testQuantity()[pri:0, instance:scriptForPOS.ValidateQuantity@52719fb6]" started-at="2024-10-22T12:20:44 GST" name="testQuantity" finished-at="2024-10-22T12:21:11 GST" duration-ms="26731" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Exception occured in Customers tab]]>
             </line>
             <line>
-              <![CDATA[Pass:Item qty updated:200]]>
+              <![CDATA[PASS:Item qty updated:200]]>
             </line>
           </reporter-output>
         </test-method> <!-- testQuantity -->
-        <test-method is-config="true" signature="postcondition(org.testng.ITestResult)[pri:0, instance:scriptForPOS.ValidateQuantity@52719fb6]" started-at="2024-10-21T21:19:50 GST" name="postcondition" finished-at="2024-10-21T21:19:52 GST" duration-ms="2145" status="PASS">
+        <test-method is-config="true" signature="postcondition(org.testng.ITestResult)[pri:0, instance:scriptForPOS.ValidateQuantity@52719fb6]" started-at="2024-10-22T12:21:11 GST" name="postcondition" finished-at="2024-10-22T12:21:13 GST" duration-ms="2134" status="PASS">
           <params>
             <param index="0">
               <value>

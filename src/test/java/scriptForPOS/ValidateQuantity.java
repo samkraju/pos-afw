@@ -47,7 +47,7 @@ public class ValidateQuantity extends BaseTest {
 		items.clickSubmit();
 
 //		Create a new Customer
-		
+
 		try {
 			CustomersPage customer = new CustomersPage(driver);
 			customer.clickCustomerTab();
