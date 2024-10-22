@@ -105,13 +105,13 @@ public class ItemsPage {
 	public void getQuantity() {
 
 		try {
-			int q = Integer.parseInt(quant.getText());
-			System.out.println("quanity=" + q);
-			if (q == 200) {
-				Reporter.log("PASS:Item qty updated:" + q, true);
+			int itemquant = Integer.parseInt(quant.getText());
+			System.out.println("quanity=" + itemquant);
+			if (itemquant == 200) {
+				Reporter.log("PASS:Item qty updated:" + itemquant, true);
 
 			} else {
-				Reporter.log("FAIL:Item hasnt been updated:" + q, true);
+				Reporter.log("FAIL:Item hasnt been updated:" + itemquant, true);
 				Assert.fail();
 			}
 
