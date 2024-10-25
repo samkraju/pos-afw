@@ -102,21 +102,23 @@ public class ItemsPage {
 		search.sendKeys("Perfume");
 	}
 
-	public void getQuantity() {
+	public boolean getQuantity() {
 
 		try {
 			int itemquant = Integer.parseInt(quant.getText());
 			System.out.println("quanity=" + itemquant);
 			if (itemquant == 200) {
 				Reporter.log("PASS:Item qty updated:" + itemquant, true);
+				return true;
 
 			} else {
 				Reporter.log("FAIL:Item hasnt been updated:" + itemquant, true);
-				Assert.fail();
+				return false;
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
+			return false;
 		}
 
 	}

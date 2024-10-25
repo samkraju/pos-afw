@@ -4,9 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CustomersPage {
-	@FindBy(xpath = "//a[@title='Customers']")
+	@FindBy(xpath = "//a[@title='Customers']/..")
 	private WebElement customerTab;
 	@FindBy(xpath = "//button[@title='New Customer']")
 	private WebElement newCustomer;
@@ -17,7 +19,8 @@ public class CustomersPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void clickCustomerTab() {
+	public void clickCustomerTab(WebDriverWait wait) {
+		wait.until(ExpectedConditions.elementToBeClickable(customerTab));
 		customerTab.click();
 
 	}

@@ -1,5 +1,6 @@
 package scriptForPOS;
 
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -47,10 +48,9 @@ public class ValidateQuantity extends BaseTest {
 		items.clickSubmit();
 
 //		Create a new Customer
-
 		try {
 			CustomersPage customer = new CustomersPage(driver);
-			customer.clickCustomerTab();
+			customer.clickCustomerTab(wait);
 			customer.clickNewCustomer();
 			customer.enterName();
 		} catch (Exception e) {
@@ -68,8 +68,8 @@ public class ValidateQuantity extends BaseTest {
 //		Verify the received quantity in items table
 		items.clickItems();
 		items.searchItem();
-		items.getQuantity();
-
+		boolean status = items.getQuantity();
+		Assert.assertTrue(status);
 	}
 
 }
