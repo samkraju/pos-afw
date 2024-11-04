@@ -21,9 +21,9 @@ public class ItemsPage {
 	private WebElement wholesaleprice;
 	@FindBy(id = "unit_price")
 	private WebElement retailprice;
-	@FindBy(id = "quantity_2")
+	@FindBy(id="quantity_1")
 	private WebElement quantity;
-	@FindBy(id = "quantity_1")
+	@FindBy(id="receiving_quantity")
 	private WebElement stock;
 	@FindBy(xpath = "//button[text()='Submit']")
 	private WebElement submit;

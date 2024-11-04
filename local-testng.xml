@@ -1,6 +1,6 @@
 
 <suite name="Suite" parallel="none">
-	<test name="TestChrome">
+<!-- 	<test name="TestChrome">
 		<parameter name="browser" value="chrome"></parameter>
 		<parameter name="grid" value="no"></parameter>
 		<parameter name="gridURL" value="http://192.168.1.102:4444"></parameter>
@@ -10,8 +10,18 @@
 			<package name="scriptForPOS"></package>
 		</packages>
 
-	<!-- </test> 
-	<test name="TestFirefox">
+	</test> 
+ -->
+	<test name="TestChrome">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="grid" value="no"></parameter>
+		<parameter name="gridURL" value="http://192.168.1.102:4444"></parameter>
+		<parameter name="env" value="local_env.properties"></parameter>
+		<classes>
+			<class name="scriptForPOS.ValidateQuantity"></class>
+		</classes>
+	</test>
+	<!-- <test name="TestFirefox">
 		<parameter name="browser" value="firefox"></parameter>
 		<parameter name="grid" value="yes"></parameter>
 		<parameter name="gridURL" value="http://192.168.1.102:4444"></parameter>
@@ -29,7 +39,7 @@
 
 		<packages>
 			<package name="script"></package>
-		</packages> -->
+		</packages>
 
-	</test> 
+	</test>  -->
 </suite>
