@@ -12,8 +12,13 @@ public class CustomersPage {
 	private WebElement customerTab;
 	@FindBy(xpath = "//button[@title='New Customer']")
 	private WebElement newCustomer;
-	@FindBy(xpath = "//div[@class='modal-body']")
-	private WebElement customername;
+
+	@FindBy(id = "first_name")
+	private WebElement firstname;
+	@FindBy(id = "last_name")
+	private WebElement lastname;
+	@FindBy(id = "submit")
+	private WebElement submit;
 
 	public CustomersPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -29,8 +34,16 @@ public class CustomersPage {
 		newCustomer.click();
 	}
 
-	public void enterName() {
-		customername.sendKeys("Eric");
+	public void enterFName(String fn) {
+		firstname.sendKeys(fn);
+	}
+
+	public void enterLName(String ln) {
+		lastname.sendKeys(ln);
+	}
+
+	public void submit() {
+		submit.click();
 	}
 
 }

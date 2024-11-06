@@ -5,10 +5,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+import net.bytebuddy.asm.Advice.Enter;
 
 public class ReceivingsPage {
 
-	@FindBy(xpath = "//a[@href='https://pos.aksharatraining.in/pos/public/receivings']")
+	@FindBy(xpath = "//a[@title='Receivings']")
 	private WebElement receivings;
 	@FindBy(id = "item")
 	private WebElement item;
@@ -17,6 +20,12 @@ public class ReceivingsPage {
 	private WebElement quantity;
 	@FindBy(id = "finish_receiving_button")
 	private WebElement finish;
+	@FindBy(xpath = "//button[@title='Receive']")
+	private WebElement returnitem;
+	@FindBy(xpath="//select[@name='receiving_quantity']")
+	private WebElement rcvquant;
+	@FindBy(xpath="//span[@class='glyphicon glyphicon-refresh']")
+	private WebElement refresh;
 
 	public ReceivingsPage(WebDriver driver) {
 
@@ -28,8 +37,8 @@ public class ReceivingsPage {
 		receivings.click();
 	}
 
-	public void enterItem() {
-		item.sendKeys("Perfume");
+	public void enterItem(String itemname) {
+		item.sendKeys(itemname);
 		try {
 			Thread.sleep(2000);
 		} catch (Exception e) {
@@ -41,12 +50,37 @@ public class ReceivingsPage {
 
 	}
 
-	public void enterQuantity() {
-		quantity.sendKeys("100");
+	public void enterQuantity(String receivingQuantity) {
+		quantity.click();
+		quantity.sendKeys(Keys.BACK_SPACE);
+		quantity.sendKeys(receivingQuantity);
+		refresh.click();
 	}
 
 	public void clickFinish() {
 		finish.click();
 	}
+
+	public void returnItem() {
+//		Select select=new Select(returnitem);
+//		select.selectByVisibleText(selectoption);
+		returnitem.click();
+		returnitem.sendKeys(Keys.ARROW_DOWN);
+		returnitem.sendKeys(Keys.ENTER);
+	}
+	public void enterReturnQuantity(String returnQuantity)
+	{
+		quantity.click();
+		quantity.sendKeys(Keys.BACK_SPACE);
+		quantity.sendKeys(returnQuantity);
+		refresh.click();
+	}
+//	public void enterRcvQuantity()
+//	{
+//		rcvquant.click();
+//		rcvquant.sendKeys(Keys.ARROW_DOWN);
+//		rcvquant.sendKeys(Keys.ENTER);
+//		
+//	}
 
 }

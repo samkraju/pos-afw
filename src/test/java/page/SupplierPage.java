@@ -12,11 +12,11 @@ public class SupplierPage {
 	private WebElement newSupplier;
 	@FindBy(id = "company_name_input")
 	private WebElement companyName;
-	@FindBy(id="first_name")
+	@FindBy(id = "first_name")
 	private WebElement firstname;
-	@FindBy(id="last_name")
+	@FindBy(id = "last_name")
 	private WebElement lastname;
-	@FindBy(id="submit")
+	@FindBy(id = "submit")
 	private WebElement submit;
 
 	public SupplierPage(WebDriver driver) {
@@ -32,19 +32,16 @@ public class SupplierPage {
 		newSupplier.click();
 	}
 
-	public void enterCompanyName() {
-		companyName.sendKeys("D&G");
+	public void enterCompanyName(String suppliername) {
+		companyName.sendKeys(suppliername);
 	}
-	public void enterFN()
-	{
-		firstname.sendKeys("Loveena");
+
+	public void enterFN(String supplierfn, String supplierln) {
+		firstname.sendKeys(supplierfn);
+		lastname.sendKeys(supplierln);
 	}
-	public void enterLN()
-	{
-		lastname.sendKeys("Sam");
-	}
-	public void clickSubmit()
-	{
+
+	public void clickSubmit() {
 		submit.click();
 	}
 

@@ -1,14 +1,20 @@
 package page;
 
+import java.time.Duration;
+
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
 public class ItemsPage {
+	WebDriver driver;
 	@FindBy(xpath = "//a[@title='Items']")
 	private WebElement itemsTab;
 	@FindBy(xpath = "//button[@title='New Item']")
@@ -21,9 +27,9 @@ public class ItemsPage {
 	private WebElement wholesaleprice;
 	@FindBy(id = "unit_price")
 	private WebElement retailprice;
-	@FindBy(id="quantity_1")
+	@FindBy(id = "quantity_1")
 	private WebElement quantity;
-	@FindBy(id="receiving_quantity")
+	@FindBy(id = "receiving_quantity")
 	private WebElement stock;
 	@FindBy(xpath = "//button[text()='Submit']")
 	private WebElement submit;
@@ -37,8 +43,13 @@ public class ItemsPage {
 	private WebElement search;
 	@FindBy(xpath = "//td[text()='Perfume']/../td[9]")
 	private WebElement quant;
+	@FindBy(xpath = "//td[text()='Perfume']/../td[1]")
+	private WebElement checkbox;
+	@FindBy(id = "delete")
+	private WebElement delete;
 
 	public ItemsPage(WebDriver driver) {
+		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 
@@ -50,64 +61,67 @@ public class ItemsPage {
 		newItem.click();
 	}
 
-	public void enterItemName() {
-		itemName.sendKeys("Perfume");
+	public void enterItemName(String itemname) {
+		itemName.sendKeys(itemname);
 	}
 
-	public void enterCategory() {
-		category.sendKeys("Cosmetic");
+	public void enterCategory(String categoryname) {
+		category.sendKeys(categoryname);
 	}
 
-	public void selectSupplier() {
+	public void selectSupplier(String suppliername) {
 
 		Select select = new Select(supplierid);
-		select.selectByVisibleText("D&G");
+		select.selectByVisibleText(suppliername);
 	}
 
-	public void enterWSPrice() {
+	public void enterWSPrice(String wsprice) {
 		wholesaleprice.clear();
-		wholesaleprice.sendKeys("100");
+		wholesaleprice.sendKeys(wsprice);
 	}
 
-	public void enterRetailPrice() {
+	public void enterRetailPrice(String retailvalue) {
 		retailprice.clear();
-		retailprice.sendKeys("150");
+		retailprice.sendKeys(retailvalue);
 	}
 
-	public void enterQuantity() {
+	public void enterQuantity(String quantitycount) {
 		quantity.clear();
-		quantity.sendKeys("100");
+		quantity.sendKeys(quantitycount);
 	}
 
-	public void enterStock() {
+	public void enterStock(String stockvalue) {
 		stock.clear();
-		stock.sendKeys("150");
+		stock.sendKeys(stockvalue);
 	}
 
-	public void enterReceivingQuant() {
+	public void enterReceivingQuant(String receivingcount) {
 		receivingQuant.clear();
-		receivingQuant.sendKeys("100");
+		receivingQuant.sendKeys(receivingcount);
 	}
 
-	public void enterReorder() {
+	public void enterReorder(String reordercount) {
 		reorderLevel.clear();
-		reorderLevel.sendKeys("100");
+		reorderLevel.sendKeys(reordercount);
 	}
 
 	public void clickSubmit() {
 		submit.click();
 	}
 
-	public void searchItem() {
-		search.sendKeys("Perfume");
+	public void searchItem(String itemname) {
+		search.sendKeys(itemname);
 	}
 
-	public boolean getQuantity() {
+	public boolean getQuantity(WebDriverWait wait,int expectedvalue) {
+		wait.until(ExpectedConditions.elementToBeClickable(quant));
+		
+		int itemquant = Integer.parseInt(quant.getText());
 
 		try {
-			int itemquant = Integer.parseInt(quant.getText());
-			System.out.println("quanity=" + itemquant);
-			if (itemquant == 200) {
+
+			System.out.println("quantity=" + itemquant);
+			if (itemquant ==expectedvalue ) {
 				Reporter.log("PASS:Item qty updated:" + itemquant, true);
 				return true;
 
@@ -116,10 +130,21 @@ public class ItemsPage {
 				return false;
 			}
 
-		} catch (Exception e) {
+		}
+
+		catch (Exception e) {
+
 			e.printStackTrace();
 			return false;
 		}
+
+	}
+
+	public void deleteItem() {
+		checkbox.click();
+		delete.click();
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
 
 	}
 

@@ -12,7 +12,7 @@ import page.HomePage;
 import page.LoginPage;
 
 public class ValidLogin extends BaseTest {
-	@Test(priority = 1) // priority will be based on manual test cases flow of execution
+	@Test(priority = 2) // priority will be based on manual test cases flow of execution
 	public void testValidLogin() {
 		String un=Utility.readFromExcel(xlpath, "ValidLogin", 1, 0);
 		String pw=Utility.readFromExcel(xlpath, "ValidLogin", 1, 1);

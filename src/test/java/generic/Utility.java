@@ -2,6 +2,7 @@ package generic;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Properties;
 
 import org.apache.poi.ss.usermodel.Workbook;
@@ -31,46 +32,86 @@ public abstract class Utility {
 
 	public static String readFromExcel(String path, String sheet, int r, int c) {
 		String value = "";
+		Workbook wb = null;
 		try {
-			Workbook wb = WorkbookFactory.create(new FileInputStream(path));
+			wb = WorkbookFactory.create(new FileInputStream(path));
 			value = wb.getSheet(sheet).getRow(r).getCell(c).getStringCellValue();
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			if (wb != null) {
+				try {
+					wb.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 		return value;
 	}
 
 	public static void writeIntoExcel(String path, String sheet, int r, int c, String value, String path2) {
-
+		Workbook wb = null;
 		try {
-			Workbook wb = WorkbookFactory.create(new FileInputStream(path));
+			wb = WorkbookFactory.create(new FileInputStream(path));
 			wb.getSheet(sheet).getRow(r).getCell(c).setCellValue(value);
 			wb.write(new FileOutputStream(path2));
 		} catch (Exception e) {
 
+		} finally {
+			if (wb != null) {
+				try {
+					wb.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 
 	public static int getRowCount(String path, String sheet) {
 		int r = 0;
+		Workbook wb = null;
 		try {
-			Workbook wb = WorkbookFactory.create(new FileInputStream(path));
+			wb = WorkbookFactory.create(new FileInputStream(path));
 			r = wb.getSheet(sheet).getLastRowNum();
 			r = r + 1;
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			if (wb != null)
+
+			{
+				try {
+					wb.close();
+				} catch (IOException e) {
+
+					e.printStackTrace();
+				}
+			}
 		}
 		return r;
 	}
 
 	public static int getCellCount(String path, String sheet) {
 		int c = 0;
+		Workbook wb = null;
 		try {
-			Workbook wb = WorkbookFactory.create(new FileInputStream(path));
+			wb = WorkbookFactory.create(new FileInputStream(path));
 			c = wb.getSheet(sheet).getRow(0).getLastCellNum();
 
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			if (wb != null) {
+				try {
+					wb.close();
+				} catch (IOException e) {
+
+					e.printStackTrace();
+				}
+
+			}
 		}
 		return c;
 

@@ -8,7 +8,7 @@ import generic.Utility;
 import page.LoginPage;
 
 public class InvalidLogin extends BaseTest {
-	@Test(priority = 2)
+	@Test(priority = 1)
 	public void testInvalidLogin() {
 		//get data from excel sheet, update the sheet under data
 		String un = Utility.readFromExcel(xlpath, "InvalidLogin", 1, 0);
