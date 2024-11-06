@@ -11,7 +11,7 @@ import page.ReceivingsPage;
 
 public class ValidateQuantity3AfterReturn extends BaseTest {
 @Test(priority=5)
-public void testQuantityAfterSale() throws InterruptedException
+public void testQuantityAfterReturn() throws InterruptedException
 {
 	        // Login
 			String un = Utility.readFromExcel(xlpath, "ValidLogin", 1, 0);
