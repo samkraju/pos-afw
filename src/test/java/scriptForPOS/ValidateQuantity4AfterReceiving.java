@@ -22,25 +22,30 @@ public class ValidateQuantity4AfterReceiving extends BaseTest {
 		loginpage.clickButton();
 
 		// Receive the existing item from existing supplier
+		String itemname = Utility.readFromExcel(xlpath, "ValidateQuantity4", 2, "B");
+		String receivingQuantity = Utility.readFromExcel(xlpath, "ValidateQuantity4", 2, "A");
 		ReceivingsPage receivings = new ReceivingsPage(driver);
 		receivings.clickReceiving();
-		receivings.enterItem("Perfume");
-		receivings.enterQuantity("100");
+		receivings.enterItem(itemname);
+		receivings.enterQuantity(receivingQuantity);
 		receivings.clickFinish();
 
 		// sell the item to existing customer
+		String existingcustomerfullname=Utility.readFromExcel(xlpath, "ValidateQuantity4", 2, "C");
+		String salequant=Utility.readFromExcel(xlpath, "ValidateQuantity4", 2, "D");
 		SalesPage sales = new SalesPage(driver);
-		sales.clickSales(wait);
-		sales.clickItem("Perfume");
-		sales.enterExistingCustomer("Eric Sam");
-		sales.clickQuantity(wait, "10");
+		sales.clickSales();
+		sales.clickItem(itemname);
+		sales.enterExistingCustomer(existingcustomerfullname);
+		sales.clickQuantity(wait, salequant);
 		sales.clickPayment();
 		sales.clickComplete();
 
 		// verify the items in items table
+		String	expectedvalue=Utility.readFromExcel(xlpath, "ValidateQuantity4", 2, "E");
 		ItemsPage items = new ItemsPage(driver);
 		items.clickItems();
-		boolean status = items.getQuantity(wait,90);
+		boolean status = items.getQuantity(wait,expectedvalue);
 		Assert.assertTrue(status);
 
 	}

@@ -38,17 +38,22 @@ public class SalesPage {
 	}
 
 	// utilization using getter/setters
-	public void clickSales(WebDriverWait wait) {
-		wait.until(ExpectedConditions.elementToBeClickable(sales));
+	public void clickSales() {
+
 		sales.click();
 	}
 
 	public void clickNewCustomer() {
+
 		newCustomer.click();
 	}
 
-	public void enterName(String customerfn, String customerln) {
+	public void enterFName(String customerfn) {
 		firstname.sendKeys(customerfn);
+
+	}
+
+	public void enterLName(String customerln) {
 		lastname.sendKeys(customerln);
 	}
 

@@ -7,6 +7,7 @@ import java.util.Properties;
 
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.util.CellReference;
 
 //Copied the program from demo1 and made changes,, also goto testNG and add parameters environemnt value either QA/staging
 //Demo1 //WAP to access data from a file
@@ -36,6 +37,26 @@ public abstract class Utility {
 		try {
 			wb = WorkbookFactory.create(new FileInputStream(path));
 			value = wb.getSheet(sheet).getRow(r).getCell(c).getStringCellValue();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (wb != null) {
+				try {
+					wb.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		return value;
+	}
+
+	public static String readFromExcel(String path, String sheet, int r, String c) {
+		String value = "";
+		Workbook wb = null;
+		try {
+			wb = WorkbookFactory.create(new FileInputStream(path));
+			value = wb.getSheet(sheet).getRow(r).getCell(CellReference.convertColStringToIndex(c)).getStringCellValue();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

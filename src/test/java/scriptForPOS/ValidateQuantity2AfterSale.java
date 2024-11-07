@@ -21,21 +21,27 @@ public class ValidateQuantity2AfterSale extends BaseTest {
 		loginpage.clickButton();
 
 		// sell the new item to new customer
+		String customerfn = Utility.readFromExcel(xlpath, "ValidateQuantity2", 2, "A");
+		String customerln = Utility.readFromExcel(xlpath, "ValidateQuantity2", 2, "B");
+		String itemname = Utility.readFromExcel(xlpath, "ValidateQuantity2", 2, "E");
+		String quantity = Utility.readFromExcel(xlpath, "ValidateQuantity2", 2, "D");
 		SalesPage salespage = new SalesPage(driver);
-		salespage.clickSales(wait);
+		salespage.clickSales();
 		salespage.clickNewCustomer();
-		salespage.enterName("Aiden", "Sam");
+		salespage.enterFName(customerfn);
+		salespage.enterLName(customerln);
 		salespage.clickSubmit();
-		salespage.clickItem("Perfume");
-		salespage.clickQuantity(wait, "10");
+		salespage.clickItem(itemname);
+		salespage.clickQuantity(wait, quantity);
 		salespage.clickPayment();
 		salespage.clickComplete();
 
 		// verify the quantity in items table
+		String expectedvalue = Utility.readFromExcel(xlpath, "ValidateQuantity2", 2, "C");
 		ItemsPage items = new ItemsPage(driver);
 		items = new ItemsPage(driver);
 		items.clickItems();
-		boolean status = items.getQuantity(wait, 190);
+		boolean status = items.getQuantity(wait,expectedvalue );
 		Assert.assertTrue(status);
 
 	}

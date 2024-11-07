@@ -46,7 +46,7 @@ public class ItemsPage {
 	private WebElement delete;
 
 	public ItemsPage(WebDriver driver) {
-		this.driver=driver;
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
@@ -110,20 +110,23 @@ public class ItemsPage {
 		search.sendKeys(itemname);
 	}
 
-	public boolean getQuantity(WebDriverWait wait,int expectedvalue) {
+	public boolean getQuantity(WebDriverWait wait, String expectedvalue) {
 		wait.until(ExpectedConditions.elementToBeClickable(quant));
-		
-		int itemquant = Integer.parseInt(quant.getText());
+
+		String actualvalue = quant.getText();
 
 		try {
-
-			System.out.println("quantity=" + itemquant);
-			if (itemquant ==expectedvalue ) {
-				Reporter.log("PASS:Item qty updated:" + itemquant, true);
+			System.out.println("quantity=" + actualvalue);
+			if (actualvalue.equals(expectedvalue)) {
+				Reporter.log("Expected value=" + expectedvalue, true);
+				Reporter.log("Actual value=" + actualvalue, true);
+				Reporter.log("PASS:Item qty updated:" + actualvalue, true);
 				return true;
 
 			} else {
-				Reporter.log("FAIL:Item hasnt been updated:" + itemquant, true);
+				Reporter.log("Expected value=" + expectedvalue, true);
+				Reporter.log("Actual value=" + actualvalue, true);
+				Reporter.log("FAIL:Item hasnt been updated:" + actualvalue, true);
 				return false;
 			}
 
